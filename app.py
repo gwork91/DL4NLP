@@ -13,7 +13,7 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import urllib2
 import cookielib
-import urllib
+from urllib import request
 
 app = Flask(__name__)
 english_bot = ChatBot("English Bot")
