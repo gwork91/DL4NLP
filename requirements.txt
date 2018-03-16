@@ -8,6 +8,6 @@ itsdangerous==0.24
 requests==2.10.0
 wsgiref==0.1.2
 chatterbot>=0.4.6
-urllib
+urllib2
 clarifai==2.0.30
 enum34
