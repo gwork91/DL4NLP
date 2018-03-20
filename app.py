@@ -2,6 +2,7 @@ import os
 import sys
 import json
 from datetime import datetime
+import subprocess
 
 import requests
 from flask import Flask, request
@@ -84,7 +85,7 @@ def log(msg, *args, **kwargs):  # simple wrapper for logging to stdout on heroku
             msg = json.dumps(msg)
         else:
             msg = unicode(msg).format(*args, **kwargs)
-        print u"{}: {}".format(datetime.now(), msg)
+        print( u"{}: {}", format(datetime.now(), msg))
     except UnicodeEncodeError:
         pass  # squash logging errors in case of non-ascii text
     sys.stdout.flush()
